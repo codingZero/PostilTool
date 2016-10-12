@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  批注文字
+//
+//  Created by 肖睿 on 2016/10/11.
+//  Copyright © 2016年 肖睿. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+Frame.h"
+
+
+#define ScreenSize ([[UIScreen mainScreen] bounds].size)
+#define ScreenWidth (ScreenSize.width)
+#define ScreenHeight (ScreenSize.height)
+#define NaviBarH 64
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y0c-SD-CJR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMH-tx-RmZ">
+                                <rect key="frame" x="50" y="628" width="50" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cE6-UR-FVM"/>
+                                </constraints>
+                                <state key="normal" image="t"/>
+                                <connections>
+                                    <action selector="addRemark" destination="BYZ-38-t0r" eventType="touchUpInside" id="230-1U-Uaa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-Wf-n3F" customClass="RecordButton">
+                                <rect key="frame" x="281" y="628" width="50" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fwJ-fJ-N1R"/>
+                                </constraints>
+                                <state key="normal" image="maikefeng"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qSf-Wf-n3F" secondAttribute="trailing" constant="44" id="UtM-yG-goh"/>
+                            <constraint firstItem="cMH-tx-RmZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="c91-Wd-tqN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cMH-tx-RmZ" secondAttribute="leading" constant="50" id="efQ-gS-XBU"/>
+                            <constraint firstAttribute="bottom" secondItem="qSf-Wf-n3F" secondAttribute="bottom" constant="8" id="o1X-PA-fzM"/>
+                            <constraint firstAttribute="bottom" secondItem="cMH-tx-RmZ" secondAttribute="bottom" constant="8" id="xwg-qH-SX1"/>
+                            <constraint firstItem="cMH-tx-RmZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxR-J8-iCp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="efQ-gS-XBU"/>
+                                <exclude reference="yxR-J8-iCp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="xQX-yX-K5f"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="recordButton" destination="qSf-Wf-n3F" id="QQs-5I-5IL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568.5" y="230.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gHT-Pj-qDh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y0c-SD-CJR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l4N-Xe-ItR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kG7-hL-j3h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R58-YX-aIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.5" y="230.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="maikefeng" width="31" height="31"/>
+        <image name="t" width="31" height="31"/>
+    </resources>
+</document>
